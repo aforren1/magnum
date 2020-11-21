@@ -64,7 +64,6 @@ info->pNext = &validationFeatures;
 }
 
 {
-Vk::Instance instance;
 /* [CommandPool-usage] */
 Vk::Device device{DOXYGEN_IGNORE(NoCreate)};
 
@@ -125,7 +124,7 @@ DOXYGEN_IGNORE()
 Vk::Instance instance;
 VkQueryPool pool{};
 /* [Device-function-pointers] */
-Vk::Device device{DOXYGEN_IGNORE(instance, Vk::DeviceCreateInfo{Vk::pickDevice(instance)})};
+Vk::Device device{DOXYGEN_IGNORE(NoCreate)};
 
 // ...
 device->ResetQueryPoolEXT(device, DOXYGEN_IGNORE(pool, 0, 0));
@@ -133,7 +132,6 @@ device->ResetQueryPoolEXT(device, DOXYGEN_IGNORE(pool, 0, 0));
 }
 
 {
-Vk::Instance instance;
 VkQueryPool pool{};
 /* Header included again inside a function, but it's fine as the guards will
    make it empty */
@@ -142,7 +140,7 @@ VkQueryPool pool{};
 
 DOXYGEN_IGNORE()
 
-Vk::Device device{DOXYGEN_IGNORE(instance, Vk::DeviceCreateInfo{Vk::pickDevice(instance)})};
+Vk::Device device{DOXYGEN_IGNORE(NoCreate)};
 device.populateGlobalFunctionPointers();
 
 DOXYGEN_IGNORE()
