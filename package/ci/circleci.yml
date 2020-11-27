@@ -428,16 +428,16 @@ workflows:
   version: 2
   build:
     jobs:
-    - linux-gl
-    - linux-vulkan
-    - linux-gles2
-    - linux-gles3
-    - linux-static
-    - linux-nondeprecated
-    - linux-sanitizers
-    - linux-threadsanitizer
+    #- linux-gl
+    #- linux-vulkan
+    #- linux-gles2
+    #- linux-gles3
+    #- linux-static
+    #- linux-nondeprecated
+    #- linux-sanitizers
+    #- linux-threadsanitizer
     - macos-gl
-    - macos-vulkan
-    - macos-static
-    - emscripten-webgl1
-    - emscripten-webgl2
+    #- macos-vulkan
+    #- macos-static
+    #- emscripten-webgl1
+    #- emscripten-webgl2
